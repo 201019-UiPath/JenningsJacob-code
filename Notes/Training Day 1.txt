@@ -1,0 +1,76 @@
+Training Day 1
+	we are UiPath Batch -> RPA (robotic process automation)
+
+	week 1-4 -> .NET
+		1. C#
+		2. SQL
+		3. Asp.NET (MVC, SOAP and RESTful)
+		4. Front tech (HTML, CSS, JS, VB)
+
+	week 5-8 -> UiPath
+		5. UiPath foundation -> Studio
+		6. UiPath advanced -> ReFramework Orchestrator
+		7. UiPath new features and advanced training -> Hyperautomation and ELK
+
+	week 9-10 -> P3
+		-  portfolios
+		-  client interviews and showcase
+
+	Training Operations:
+		Evaluations: 
+			Quizzes -> daily (5-10 qustions)
+			1 on 1s -> verbal interview
+			QC		-> someone else on team visits the team, evaluating us as a whole
+
+		Panels:
+			mock interviews starting week 9
+
+		Projects:
+			4(ish) projects:
+				P0: C# + SQL console appplication 
+				P1: extended P0 with GUI
+				P2: UiPath foundation project
+				P3: in-house project with everyone
+
+		Timing (all times are PST):
+			6:00 - 2:00  training
+
+			START - 6:00
+			BREAK - 7:30 
+			LUNCH - 9:30 - 10:30
+			BREAK - 12:00
+			DONE  - 2:00
+
+-----------------------------------------------------------------------------------------
+
+.NET -> platform to create apps
+	kind of apps you can create with .NET
+		CUI (console user interface)
+		GUI (desktop, windows applications, web-based, APIs)
+		microservices
+		cloud services
+		IOT
+		game development
+		machine learning models
+
+	2002 -> .NET framework 1.0 created
+	2020 -> .NET versions:
+
+	Framework 		  Core(2016)		  Xamarin	 	 Mono
+	(Windows)	(platfrom independent)	(Phone apps)	(MacOS)
+
+Components of .NET Core SDK:
+	dotnet CLI
+	dotnet libraries (standard libraries)
+	runtime
+
+-----------------------------------------------------------------------------------------
+
+	WHAT TO DO FOR LAPTOP:
+		download software from email
+		download .NET core sdk (link on slack)
+
+-----------------------------------------------------------------------------------------
+
+GIT:
+	first thing you want to do is add a .gitignore
