@@ -1,1 +1,62 @@
 10/20/2020
+	SDK using for project -> .NET core
+		includes dotnet CLI, libraries, and runtime
+
+	CLI: common language infrasructure
+		can write code in C#, f#, or VB
+		all languages have specific compilers:
+			c# -> csc
+			f# -> fsc
+			VB -> vbc
+		command to compile code: dotnet build
+			code compiled into CIL/MSEL (common intermediate language) (equivalent to JVM in java)
+			this makes it platform independant
+			has entity called runtime that loads and executes managed assembly code
+
+--------------------------------------------------------------------------------------------------------
+
+	Assembly vs Namespace
+		Namespace:
+			logically arrange the types (classes) to avoid naming conflicts
+		Assembly:
+			physical separation of types (classes)
+			in the from of .exe or .dll
+				exe: executable
+					has main method
+					actual application
+				dll: dynamic linked library
+					does not have main method in class
+					deployable units
+
+--------------------------------------------------------------------------------------------------------
+
+	CTS: Common Type System
+		used by the CLR to enforce strict typing and code verification
+		ensures common mapping for types across different languages
+
+	C#		CTS 			VB 			xyz (random new language)
+	int 	System.Int32	integer		doo
+	short	System.Int16	foo			zoo
+
+	C# -> TypeSafe language, Case sensitive
+
+--------------------------------------------------------------------------------------------------------
+
+Typical Applicaitons layers:
+	UI -> user interface
+	BL -> business logic
+	DB -> database
+
+	Tiers: physical seperation of the layers
+	layers: logical seperation of the code
+
+	1-tier applications: all layers contained onto one machine
+	2-tier applications: think client-server architecture
+	3(N)-tier applications: seperate the UI, BL, and DB into separate servers
+		-> complex enterprise level applications
+
+--------------------------------------------------------------------------------------------------------
+
+Solution file:
+	collection of projects
+	helps separate code

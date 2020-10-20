@@ -1,0 +1,13 @@
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\bin\Debug\netcoreapp3.1\helloWorld.exe
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\bin\Debug\netcoreapp3.1\helloWorld.deps.json
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\bin\Debug\netcoreapp3.1\helloWorld.runtimeconfig.json
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\bin\Debug\netcoreapp3.1\helloWorld.runtimeconfig.dev.json
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\bin\Debug\netcoreapp3.1\helloWorld.dll
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\bin\Debug\netcoreapp3.1\helloWorld.pdb
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\obj\Debug\netcoreapp3.1\helloWorld.csprojAssemblyReference.cache
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\obj\Debug\netcoreapp3.1\helloWorld.AssemblyInfoInputs.cache
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\obj\Debug\netcoreapp3.1\helloWorld.AssemblyInfo.cs
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\obj\Debug\netcoreapp3.1\helloWorld.csproj.CoreCompileInputs.cache
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\obj\Debug\netcoreapp3.1\helloWorld.dll
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\obj\Debug\netcoreapp3.1\helloWorld.pdb
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\1-CSharp\helloWorld\obj\Debug\netcoreapp3.1\helloWorld.genruntimeconfig.cache

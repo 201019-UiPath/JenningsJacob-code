@@ -1,5 +1,5 @@
 ﻿using System;   // Predefined namespace
-                // Way to distinguish classes
+                // Way to package and distinguish classes
 
 namespace helloWorld    // user defined namespace
 {

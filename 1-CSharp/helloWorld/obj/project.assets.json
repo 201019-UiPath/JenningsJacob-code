@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Revature\\1-CSharp\\helloWorld\\helloWorld.csproj",
+      "projectUniqueName": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\1-CSharp\\helloWorld\\helloWorld.csproj",
       "projectName": "helloWorld",
-      "projectPath": "C:\\Revature\\1-CSharp\\helloWorld\\helloWorld.csproj",
+      "projectPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\1-CSharp\\helloWorld\\helloWorld.csproj",
       "packagesPath": "C:\\Users\\Jacob\\.nuget\\packages\\",
-      "outputPath": "C:\\Revature\\1-CSharp\\helloWorld\\obj\\",
+      "outputPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\1-CSharp\\helloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jacob\\AppData\\Roaming\\NuGet\\NuGet.Config",
