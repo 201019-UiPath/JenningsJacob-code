@@ -59,4 +59,63 @@ Typical Applicaitons layers:
 
 Solution file:
 	collection of projects
-	helps separate code
+	helps logically group code together
+		ex: model, tests, business logic, logging, services
+
+	HeroesApp -> Solution		{mkdir <sln name>}
+								{dotnet new sln} -> make sure you have sln directory ready
+
+		- UI -> console 		{dotnet new console -o <project name>} 
+								{dotnet sln <sln name> add <referebnce to console project>}
+
+		- BL -> class library	{dotnet new classLib -o <project name>}
+								{dotnet sln <sln name> add <referebnce to console project>}
+
+		- DL -> class library	{dotnet new classLib -o <project name>}
+								{dotnet sln <sln name> add <referebnce to console project>}
+
+		- TEST -> xUnit 		{dotnet new xUnit -o <project name>}
+								{dotnet sln <sln name> add <referebnce to console project>}
+
+--------------------------------------------------------------------------------------------------------
+
+C# 
+Namespace
+	Types
+		Members (methods, variables, properties)
+
+data types (classes, enums, structs, interface, delegates):
+	value types: 
+		contains the direct value
+		stored in the stack
+		fast to access
+		ex:
+			structs + enums
+			predefined: int, long, short, byte, DateTime, Char
+	reference types:
+		stores reference to that value
+		value stored in heap
+		expensive to retrieval process
+		ex:
+			classes + interfaces + delegates
+			predefined: string, array, collections
+
+Access Modifiers: change behavior of the types
+	Scopes Modifiers: 
+		private: only accessible within class
+		public: accessible anywhere
+		internal: only accessible within assembly
+		protected: only accessible within child classes
+		protected internal: accessible from current assembly or from child classes
+		private protected: accessible from child classes within current assembly
+
+	Default modifiers:
+		for class 			 -> internal
+		for members of class -> private
+
+Properties: like getters/setters in Java
+	smart fields to encapsulate private members
+
+Collections: In memory storage of data
+	Arrays: 1-D, 2-D, jagged arrays and multi-dimensional
+	generics: stack, queue, list, dictionary
