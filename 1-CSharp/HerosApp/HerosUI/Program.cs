@@ -3,7 +3,7 @@ using HerosLib;
 
 namespace HerosUI
 {
-    class Program:Hero
+    class Program
     {
         static void Main(string[] args)
         {
