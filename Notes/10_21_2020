@@ -1,0 +1,225 @@
+10/21/2020
+--------------------------------------------------------------------------------------------------------
+Arrays:
+	size	 -> fixed
+	memory	 -> contigious
+	elements -> every element must have a value
+
+Non-Genetics: all items added are in the form of objects (type casted)
+	Stack
+	Queue
+	ArrayList
+	Hashtable -> {key, value}
+
+Genetics:
+	Type-safe
+	type of the item is mentioned explicitly
+	Stack<T>
+	Queue<T>
+	List<T>
+	Dictionary<TValue, TKey>
+	SortedList<T>
+
+Boxing:
+	converting a value type to a reference type (int -> string)
+	expensive opertaion
+Unboxing:
+	converting a reference type to a value type (string -> int)
+
+Interface hierarchy:
+
+	IIterator -> IEnumerable -> GetEnumerator
+					 |
+				IEnumerable<T>
+	 				 |
+		 		 ICollection -> Add(), Remove()
+	   _____________|____________________________
+	  |			   |		   |				|
+	IList<T>	Stack<T>	Queue<T>	IDictionary<TKey, TValue>
+	  |											|
+	List<T>								Dictionary<TKey, TValue>
+
+--------------------------------------------------------------------------------------------------------
+
+OOP Pillars: (think A PIE)
+	Abstraction
+	Polymorphism
+	Inheritance
+	Encapsulation
+
+Arbstraction:
+	simplifies interface which hides the complex details of operation
+	separation between needed functionality and implementaion details
+	only show end users methods/properties available to them for use
+	implemented in C# using interfaces and abstract classes
+
+Interfaces:
+	contain definitions for a group of related functionalities
+	may not declare instace data fields
+	all method stubs declared are implicitly abstract
+	may define static methods
+	no constructors
+	cannot be instantiated
+	may define a default implementation
+
+Abstract Classes:
+	donoted using abstract keyword
+	an have constructors
+		initialize fields in the abstract class
+	often contains unimplemented method stubs
+	may have abstract and non abstract methods
+	may have fields
+
+Interface vs Abstract Classes:
+	abstract classes are used to impose/create hierarchy
+	interfaces are used as a contract to impose functionality/behavior
+
+Polymorphism
+	when you present hte same interface but the inputs/data types being utilized would differ
+	substitute different implementation details for different needs
+	object can take on many forms
+
+Implementaions of Polymorphism
+	Ad hoc
+		defines a common interface for an arbitrary set of individually specified times
+		overloading/overriding
+	Parametric
+		type can be declared abstractly so that aspects of its implementaion can be declared at runtime
+		generics
+	inclusion (sub-typal)
+		when a name denotes instaces of many different classes relate dby some common superclass
+		non-generics
+	coercion
+		widening/narrowing
+		int32 -> int64(8/16) and vice versa
+
+Inheritance
+	mechanism of basing an object/class upon another object/class
+		establish "is-a" relationship
+	promotes code reusability
+	in C# constructors are inherited from parent to child
+	you can inherit multiple interfaces but you can only inherit from one class
+
+	default constructors of super class called implicitly then child class
+	base keyword -> super() in java
+
+Composition
+	one object maintains instances of the other object
+	(has-a)
+	composite object responsible for the lifecycle of all constituents
+
+Aggregation
+	one object contains multiple instances of another object
+	(has-a)
+	lifecylce of the ocntained objects are independent of the aggregates object
+
+Association
+	one object uses a separate instance of another object as a part of its functionality
+	(uses-a)
+	lifecylces of the two objects are entirel seprate from one another
+
+Are static members of a class inherited?
+	static classes are not inherited, they're sealed
+	No, static members belong to the class
+	child classes can reference them, but they do not belong them
+
+Encapsulation
+	treat related data/behavior as a single unit/capsule
+	means validation and any processing of the data in your data classes would be done in the calss itself
+	implemented via:
+		data hiding -> access modifiers
+			focuses on restrictin gthe use of data, inteding to assure the data security
+		wrapping	-> grouping logic in classes, assemblies, and namespaces
+			focuses on encapsulatin the complex data in order to present a simpler view for the user
+
+--------------------------------------------------------------------------------------------------------
+
+P0:
+	product -> abstract class
+		name
+		cost
+		id
+	what kind of product?
+		food:
+			expiration date
+			ingredients
+		clothes
+			size
+			kind
+			material
+	interfaces more for business logic:
+		data access interface
+		menu
+			implement different menus
+
+--------------------------------------------------------------------------------------------------------
+
+Exceptions
+	allow us to handle errors during runtime
+	uses try, catch, and finally keywords
+	Exception Class: base for all exceptions
+
+Try-Catch-Finally Blocks
+	try block is where you may get an exception
+	must be followed by one or more catch blocks
+		when writing multiple catch blocks, start with most specific exception first, then more general
+	finally block comes at the end, and always runs
+
+Throw keyword:
+	can be used in catch bblock to re-throw the exceptionnn that is caught
+	you can catch one exception and throw a different exception
+	throw; -> maintains stack trace and perserves the state of the exception when it was cretated
+	throw e; -> does not perserve state of the exception, deletes previous stack trace 
+
+Uesr defined exceptions
+	to create custom exceptions you must:
+		1. create your own exception classes
+		2. derive from the Exception class
+		3. end the class name with the word "Exception"
+		4. implement the three common constructors
+
+Can log exceptions in files, console, or database
+
+TODO: Go over errors
+
+--------------------------------------------------------------------------------------------------------
+
+Application Monitoring
+	highlighting certain events that come up during runtime
+		highlight in the form of pasuing program execution or recording its occurence
+	useful when finding points of failure, i.e. debugging
+
+Breakpoints
+	pauses program execution at a certain line
+	when hitting a breakpoint you can:
+		check values of any variables in scope
+		continue to the next breakpoint
+		step over a function that is called
+		step into a function that is called
+		step out into the original line that called the function
+
+Logging
+	practice wherein certain events during a program runtime is recorded
+	ecents that warrant a record:
+		errors
+		business logic events
+			someone logged into the program
+		transaction with external systems
+			performing actions on a database
+		etc.
+			depends on need
+			company conventions
+
+Logging Levels
+	1. Verbose
+		anything and everything you mighht want to know about a running blcok of code
+	2. Debug
+		internal system events that arent necessarily observable from the outside
+	3. Information
+		"things happen" "user logged in/out"
+	4. Warning
+		service is degraded or endangered
+	5. Error
+		functionality is unavailable, invariants are broken, or data is lost
+	6. Fatal
+		very severe events that will lead the application to abort

@@ -85,6 +85,7 @@ Namespace
 		Members (methods, variables, properties)
 
 data types (classes, enums, structs, interface, delegates):
+	all types in C# are inherited directly or indrectly by System.Object
 	value types: 
 		contains the direct value
 		stored in the stack
@@ -118,4 +119,10 @@ Properties: like getters/setters in Java
 
 Collections: In memory storage of data
 	Arrays: 1-D, 2-D, jagged arrays and multi-dimensional
-	generics: stack, queue, list, dictionary
+		drawbacks:
+			size of array
+			memory inefficient (size must be predefined)
+	generics: stack<T>, queue<T>, list<T>, dictionary<TKey, TValue>
+		benefits:
+			type-safe classes
+			memory efficient (don't need to mention size)
