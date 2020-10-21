@@ -1,5 +1,7 @@
 ﻿using System;
 using HerosLib;
+using HerosUI.Menus;
+
 
 namespace HerosUI
 {
@@ -63,11 +65,15 @@ namespace HerosUI
             #endregion
             // TODO: try Queue<T>
             #region Dictionary<key, value>
-            Console.WriteLine("Super Hero\tHideout");
-            foreach(var superhero in Hero.hideOut) {
-                Console.WriteLine($"{superhero.Key}\t{superhero.Value}");
-                // Console.WriteLine($"{superhero.Key}\t{Hero.hideOut[superhero.Key]}");
-            }
+            // Console.WriteLine("Super Hero\tHideout");
+            // foreach(var superhero in Hero.hideOut) {
+            //     Console.WriteLine($"{superhero.Key}\t{superhero.Value}");
+            //     // Console.WriteLine($"{superhero.Key}\t{Hero.hideOut[superhero.Key]}");
+            // }
+            #endregion
+            #region Calling hero menu
+            IMenu startMenu = new MainMenu();
+            startMenu.Start();
             #endregion
         }
     }

@@ -49,9 +49,9 @@ namespace HerosLib
             superPowers.Push("Invisibility");
             superPowers.Push("Telekenisis");
 
-            hideOut.Add("Batman", "Bat Cave");
-            hideOut.Add("Thor", "Asgard");
-            hideOut.Add("Black Panther", "Wakanda");
+            // hideOut.Add("Batman", "Bat Cave");
+            // hideOut.Add("Thor", "Asgard");
+            // hideOut.Add("Black Panther", "Wakanda");
         }
         public static IEnumerable<string> GetSuperPowers() {
             return superPowers;
@@ -62,8 +62,7 @@ namespace HerosLib
             //     superPowers.Remove(superPower);
             superPowers.Pop();
         }
-
-        public static void AddSuperPower(string superPower){
+        public void AddSuperPower(string superPower){
             if(superPowers != null && superPower != ""){
                 superPowers.Push(superPower);
             }
