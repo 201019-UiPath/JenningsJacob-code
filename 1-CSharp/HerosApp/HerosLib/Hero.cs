@@ -39,16 +39,34 @@ namespace HerosLib
         // jagged array
         // public int[][] ja = new int[3][];
         #endregion
-        public static List<string> superPowers = new List<string>();
-        
-        
-        public static List<string> GetSuperPowers() {
-            superPowers.Add("Strength");
-            superPowers.Add("Fly");
-            superPowers.Add("Invisibility");
-            superPowers.Add("Telekenisis");
+        public static Stack<string> superPowers = new Stack<string>();       // Stack -> LIFO
 
+        public static Dictionary<string, string> hideOut = new Dictionary<string, string>();
+        public Hero()
+        {
+            superPowers.Push("Strength");
+            superPowers.Push("Fly");
+            superPowers.Push("Invisibility");
+            superPowers.Push("Telekenisis");
+
+            hideOut.Add("Batman", "Bat Cave");
+            hideOut.Add("Thor", "Asgard");
+            hideOut.Add("Black Panther", "Wakanda");
+        }
+        public static IEnumerable<string> GetSuperPowers() {
             return superPowers;
+        }
+
+        public static void RemoveSuperPower(){//string superPower){
+            // if(superPowers.Contains(superPower))
+            //     superPowers.Remove(superPower);
+            superPowers.Pop();
+        }
+
+        public static void AddSuperPower(string superPower){
+            if(superPowers != null && superPower != ""){
+                superPowers.Push(superPower);
+            }
         }
     }
     #endregion
