@@ -200,7 +200,7 @@ Breakpoints
 
 Logging
 	practice wherein certain events during a program runtime is recorded
-	ecents that warrant a record:
+	events that warrant a record:
 		errors
 		business logic events
 			someone logged into the program
@@ -223,3 +223,33 @@ Logging Levels
 		functionality is unavailable, invariants are broken, or data is lost
 	6. Fatal
 		very severe events that will lead the application to abort
+
+Where can you log?
+	Files
+		.txt .xml etc
+		really depends on how you configure your logs
+	DBs
+	Console
+	Etc.
+		look up logging software
+
+Tracing
+	used to track user's interaction wtiht the system
+	highly involved in debugging and would include information such as which functions were called and what parameters were provided during the time the user interacted with the program
+	go through the same steps as the user to find where the bug occurs
+		any methods that throw an error during tracing, would be logged
+
+--------------------------------------------------------------------------------------------------------
+
+QC Orientation
+	QC meetings split everyone into breakout rooms
+		happen weekly
+	email: andrew.crenwelge@revature.com
+
+--------------------------------------------------------------------------------------------------------
+
+Regular Expressions (RegEx)
+	expressions used to regulate input
+	usually only used for pattern matching
+	using certain notaion, you can build an expression to check if a certain input follows a pattern
+	use RegEx class to build and utilize RegeEx expressions
