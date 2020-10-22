@@ -22,3 +22,184 @@ Test Driven Development (TDD)
 	2. implement code to make tests pass
 	want to try extreme cases
 	want to ensure that your code will fail properly
+
+Tips for grouping tests
+	Create testing project for each different project
+	try to modularize all tests
+
+--------------------------------------------------------------------------------------------------------
+
+Garbage Collection
+	resides in CLR
+	allocates and frees memory
+
+Fundamentals of memory:
+	each process has 2gb of virtual memory allocated
+	in C# you cannot decide where or how memory is allocatied during the process
+	virtual memory has 3 states:
+		1. free
+			unallocated and available
+		2. reserved
+			available
+			unusable for other processes
+			must be commited in order to store data
+		3. commited
+			assigned to physical storage
+
+Benefits of garbage collection
+	no memory leaks
+	efficient memory allocation
+	GC automatically reclaims unused objects, clears memory, and makes memory available
+	constructors do not have to initialze every data field
+	GC makes sure that one object cannot use the contents of another object
+
+Phases of Garbage Collectiono
+	1. Marking Phase
+	2. Relocating Phase
+	3. Compacting Phase
+
+Managed code: code managed by CLR at runtime
+	CLR provides memory management, security boundaries, and type safety
+	code is compiled into Intermediate Language which the CLR compiles and executes
+	CLR manages the Just-In-Time compiling code from IL to machine code
+Unmanaged code: code that runs outside the CLR
+	window handles, open files, streams
+
+IDisposable Interface
+	GC has no knowledge of unmanaged resources
+	IDisposable proivides a method for releasing unmanaged resources
+		{IDisposable.Dispose()}
+
+Using block
+	can use {using} instead of calling Dispose() yourself
+	at compile time, language compiler implements the IL for a try/finally block
+	syntax:
+		using (var font1 = new Font("Arial", 10.0f)) {					using (StreamReader sr = new StreamReader(filename)){
+			byte charset = font1.GdiCharSet;					or 			txt = sr.ReadToEnd();
+		}																}
+	This is same as:
+		var font1 = new Font("Arial", 10.0f);
+		try {
+			byte = charset = font1.GdiCharSet;
+		}
+		finally {
+			if (font1 != null)
+				((IDisposable)font1).Dispose();
+		}
+
+--------------------------------------------------------------------------------------------------------
+
+Serialization
+	process of converting an object into a stream of bytes to store the object or transmit it to memory, a database, or file
+	save the state the objcet for later recreation (when needed)
+	Deserialization:
+		unpacking serialized objects
+	Formats:
+		custom binary
+		custome text:
+			XML
+			JSON
+	we convert objects into stream of bytes so that a file manager and other programs can understand it
+	use cases:
+		anything and everything you want to store and save data
+
+File I/O
+	Big picture: Data Source -> Stream of bytes -> program
+
+	Byte stream:
+		stream of bytes used in writing to an external file
+		a bridge between c# code and the file
+		send bytes to the stream so they can be written externally
+		types of bytestreams:
+			Stream
+			FileStream:		R/W to any location in a file
+			MemoryStream:	random access to streamed data stored in memory
+			BufferedStream: Tempory storage for stream of bytes
+
+	Character Stream:
+		stream of characters instead of bytes
+		used to srtite stream of text to file
+		type of character streams:
+			TextReader, TextWriter, StreamReader, StreamWriter
+
+--------------------------------------------------------------------------------------------------------
+
+Cognizant Call
+	10 minute intro
+	20 minute going over UI path
+	20 minute Q&A
+		they can answer questions relevant to industry, tech, process automation
+		what kind of projects
+		waht is the typical day like
+		how big is the industry
+		what kind of career path is there for RPA engineers
+
+	we will be constantly working with them throughout the training program
+
+--------------------------------------------------------------------------------------------------------
+
+Variance
+	form of polymorphism
+
+	Type Variance:
+		describes the type that may be substituted in play of another type
+		Covariance:
+			we say a substiution is covariant with a type, foo, if foo or any other class with a sublass relationship to foo is valid
+		contravariance
+			a substitution is contravariant with aa stype bar if bar or any other class with a asuperclass relationship to bar is valid
+		invariance:
+			a subsitution is invariant with a type foo if only types that are exactly foo are valid
+
+	Type casting:
+		boxing (autoboxing):
+			upcasting
+			casting to a supertype
+			implicit type casting
+		unboxing:
+			downcasting
+			casting to a subtype
+			explicit type casting
+		note that type are similar to each other such as your numeric types can be casted to another similar type
+
+	Type Checking:
+		{is} operator:
+			used to check if the run-time type of an object is compatible with the given type or not
+			returns true if given object is of the same type
+			otherwise return false (including null)
+		{typeof} operator:
+			used to get a type at the compile-time
+				used to get the System.Type object for a type
+			gives you the CTS version of the type
+			takes the Type itself as an argument and returns the marked type of the argument
+
+--------------------------------------------------------------------------------------------------------
+
+Pass By Reference
+	by default, C# is pass by value
+
+	{Out} keyword
+		used for the passing the arguments to methods as a reference type
+		used when a method returns multiple values
+		out parameter does not pass the property
+		variable need not be initialized when passing an out parameter
+
+	{ref} keyword
+		used for the passing of arguments by a reference
+			if any changes made in this argument in the method will reflect in that variable when the control return to the calling method
+		ref parameter does not pass the property
+		variable needs to be initalized before passing
+
+--------------------------------------------------------------------------------------------------------
+
+Delegates: type-safe function pointers in C# 
+	advantages:
+		late binding: process that establishes a connection between an app UI and the data it displays
+		method chaining: creating pipeline and lifecycle of a framework
+		anonymous methods: foundation of Lambda expressions
+		Events
+
+	Types of Delagates:
+		Single-Cast:
+		Multi-Cast:
+		Strongly-Typed Delagates: (predefined delegates)
+	
