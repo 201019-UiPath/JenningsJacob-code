@@ -63,9 +63,9 @@ namespace HerosLib
             superPowers.Pop();
         }
         public void AddSuperPower(string superPower){
-            if(superPowers != null && superPower != ""){
+            if(superPower != null && superPower != ""){
                 superPowers.Push(superPower);
-            }
+            } else throw new ArgumentException("Super power should not be null");
         }
     }
     #endregion
