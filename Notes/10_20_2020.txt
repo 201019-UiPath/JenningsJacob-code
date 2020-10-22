@@ -101,14 +101,42 @@ data types (classes, enums, structs, interface, delegates):
 			classes + interfaces + delegates
 			predefined: string, array, collections
 
-Access Modifiers: change behavior of the types
+Access Modifiers: change behavior of the types or type members
 	Scopes Modifiers: 
-		private: only accessible within class
-		public: accessible anywhere
-		internal: only accessible within assembly
-		protected: only accessible within child classes
+		private: 			only accessible within class
+		public: 			accessible anywhere
+		internal: 			only accessible within assembly
+		protected: 			only accessible within child classes
 		protected internal: accessible from current assembly or from child classes
-		private protected: accessible from child classes within current assembly
+		private protected: 	accessible from child classes within current assembly
+
+		using scope modifiers encapsulation is achieved
+	Extended modifiers:
+		abstract:	thing being modified has missing or incomplete implementation
+					inteded to be a base class of other classes
+					not instantiated on their own, meant to be inherited
+		virtual:	used to modify a method, property, indexer, or event and allow it to be overridden
+		sealed:		prevents inheritence
+					precents an overriding method from being overridden by a more derived method
+		static:		members: belong to the class type itself rather than the specifc object instance
+							 cannot use {this} to refernce static methods and property accessors
+							 referenced through the type name
+					classes: cannot be instantiated
+							 all members must be static
+							 just a container for static members
+		const:		const fields and locals aren't variables
+					may not be modified
+					can be numbers, Boolean, strings, or null
+					only reference type that can be const are string and null
+		readonly:	initialization can only occur as part of the declaration or in a constructor in the same class
+		overrride:	members: provide new implementation of inherited method
+							 must have the same signature as the inherited method
+							 both methods must be virtual, abstract, or override
+					classes: required to extend or modify the abstract or virtual implementation on an inherited method
+		partial:	split the definition of a class, a struct, an interface, or a method over two or more source files
+					each source file contains a section, all parts are combined on compilation
+					when would you do this?
+						working with automatically generated source code can be added to the class without having to recreate the source file
 
 	Default modifiers:
 		for class 			 -> internal
