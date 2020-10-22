@@ -117,13 +117,14 @@ Access Modifiers: change behavior of the types or type members
 					not instantiated on their own, meant to be inherited
 		virtual:	used to modify a method, property, indexer, or event and allow it to be overridden
 		sealed:		prevents inheritence
-					precents an overriding method from being overridden by a more derived method
+					prevents an overriding method from being overridden by a more derived method
 		static:		members: belong to the class type itself rather than the specifc object instance
 							 cannot use {this} to refernce static methods and property accessors
 							 referenced through the type name
 					classes: cannot be instantiated
 							 all members must be static
 							 just a container for static members
+							 implicitly sealed
 		const:		const fields and locals aren't variables
 					may not be modified
 					can be numbers, Boolean, strings, or null
