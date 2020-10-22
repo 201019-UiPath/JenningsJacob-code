@@ -6,7 +6,7 @@ namespace HerosLib
     public delegate void heroDel();
     public class HeroTask : IHeroOperations, IHeroSuperPowers
     {
-        string path = "../SuperPowers.txt";
+        string path = "SuperPowers.txt";
         public void DoWork()
         {
             Console.Write("Saving humanity is my work");
@@ -15,6 +15,7 @@ namespace HerosLib
         public void GetPowers()
         {
             string superPower = File.ReadAllText(path);
+            Console.WriteLine(superPower);
         }
 
         public void ManageLife()
