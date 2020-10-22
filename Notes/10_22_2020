@@ -1,0 +1,24 @@
+10/22/2020
+--------------------------------------------------------------------------------------------------------
+Unit Testing
+	tests small units of your code
+	helpful when you want to make sure everything working (without repeating some actions to get there)
+	helpful pinpointing where the code is going wrong
+	We will be using Xunit
+
+Parts of unit test
+	Arrange
+		any setup necessary to prepare for the behavior to test
+		assume the thing you want to test works
+	Act
+		do the thing you want to test
+		name the method after the thing you want to test
+	Assert
+		verify the behavior was as expected
+		sometimes on the same step as act
+
+Test Driven Development (TDD)
+	1. write tests that fail
+	2. implement code to make tests pass
+	want to try extreme cases
+	want to ensure that your code will fail properly
