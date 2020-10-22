@@ -202,4 +202,15 @@ Delegates: type-safe function pointers in C#
 		Single-Cast:
 		Multi-Cast:
 		Strongly-Typed Delagates: (predefined delegates)
+		loose coupling
 	
+	Delegate demo 1:
+		HerosLib
+			IHeroSuperPowers
+				GetPowers()
+			IheroOperations
+				DoWork()
+				ManageLife()
+			HeroTask: IHeroSuperPowers, IHeroOperations
+		HerosUI
+			make call to opertaions using delegate 
