@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace HerosUI.Menus
 {
     /// <summary>
-    /// The Wwelcome menu
+    /// The Welcome menu
     /// </summary>
     public class MainMenu:IMenu
     {
@@ -24,7 +24,7 @@ namespace HerosUI.Menus
             do {
                 System.Console.WriteLine("Enter Hero Name: ");
                 hero.Name = Console.ReadLine();
-            } while (Regex.IsMatch(hero.Name, "[0-9]"));
+            } while (Regex.IsMatch(hero.Name, "[\\d]"));
             
             Console.WriteLine("Enter to add a super power to your hero: ");
             hero.AddSuperPower(Console.ReadLine());
