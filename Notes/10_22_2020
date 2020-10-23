@@ -193,16 +193,16 @@ Pass By Reference
 
 Delegates: type-safe function pointers in C# 
 	advantages:
-		late binding: process that establishes a connection between an app UI and the data it displays
+		late binding: process that establishes a connection between an app UI and the data it displays at runtime
 		method chaining: creating pipeline and lifecycle of a framework
 		anonymous methods: foundation of Lambda expressions
-		Events
+		Events: publisher and subscriber model/pattern
+		loose coupling:
 
 	Types of Delagates:
 		Single-Cast:
 		Multi-Cast:
 		Strongly-Typed Delagates: (predefined delegates)
-		loose coupling
 	
 	Delegate demo 1:
 		HerosLib
@@ -214,3 +214,10 @@ Delegates: type-safe function pointers in C#
 			HeroTask: IHeroSuperPowers, IHeroOperations
 		HerosUI
 			make call to opertaions using delegate 
+
+	Events Demo:
+		HeroTask.cs
+			Event -> Publisher
+		Email services -> Subscriber 1
+		Social media services -> Subscriber 2
+		Text message service -> Subscriber 3

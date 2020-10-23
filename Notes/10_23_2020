@@ -1,0 +1,32 @@
+10/23/2020
+--------------------------------------------------------------------------------------------------------
+
+Serialization Formats:
+C# Object							XML:						JSON
+	class Person {					<Person>					{
+		int id = 1;						<id>1</id>					"id": 1,
+		string name = "Fred";			<name>Fred</name>			"name": "Fred"
+	}								</Person>					}
+
+--------------------------------------------------------------------------------------------------------
+
+Asynchronous Programming
+	{async} keyword
+	{await} keyword
+		code markers for processes you want to do asynchronously
+
+--------------------------------------------------------------------------------------------------------
+
+Cognizant 
+	Intelligent Process Automation
+
+	Questions:
+		what kind of projects are they working on
+		waht is the typical day like
+		how big is the industry
+		what kind of career path is there for RPA engineers
+		how big are teams
+		what kind of processes are being automated
+
+--------------------------------------------------------------------------------------------------------
+
