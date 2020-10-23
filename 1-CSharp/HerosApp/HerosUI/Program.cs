@@ -10,6 +10,8 @@ namespace HerosUI
         static void Main(string[] args)
         {
             Hero obj = new Hero();
+            HeroTask heroTask = new HeroTask();
+            Action del = new Action(heroTask.GetPowers); 
             #region default constructor
             // Hero obj = new Hero();
             // Console.WriteLine($"{obj.id}\t{obj.name}");
@@ -76,29 +78,38 @@ namespace HerosUI
             // startMenu.Start();
             #endregion
             #region Delegate, Anonymous methods, Lambda
-            HeroTask heroTask = new HeroTask();
-
             // heroDel del = new heroDel(heroTask.GetPowers);  // user-defined delegate
-            Action del = new Action(heroTask.GetPowers);       // predefined delegate
+                  // predefined delegate
 
             // Func<string, string> fd = new Func<string, string>(some method);
             // Predicate<string> pd = new Predicate<string>(some method);
 
-            del += heroTask.DoWork;     // -= unsubscribe to a method or event
-            del += heroTask.ManageLife; // += subscribe to a method or event
+            // del += heroTask.DoWork;     // -= unsubscribe to a method or event
+            // del += heroTask.ManageLife; // += subscribe to a method or event
 
-            del();
+            // del();
 
-            // Anonymous method
-            Action<string> am = delegate(string name) {
-                Console.WriteLine("Hello, from anonymous function");
-            };
+            // // Anonymous method
+            // Action<string> am = delegate(string name) {
+            //     Console.WriteLine("Hello, from anonymous function");
+            // };
 
-            am("Jacob");
-            // Lambda Expressions - shorthand notation for anonymous method
-            Action result = () => Console.WriteLine("Hello, Lambda");
-            result();
+            // am("Jacob");
+            // // Lambda Expressions - shorthand notation for anonymous method
+            // Action result = () => Console.WriteLine("Hello, Lambda");
+            // result();
+            #endregion
+            #region Asynch programming
+            
+            // Subscribing to publisher
+            heroTask.workDone += EmailService.SendEmail;
+            heroTask.workDone += TextMessageService.SendText;
+            heroTask.workDone += PushNotificationSerivice.SendPushNotification;
 
+            heroTask.DoWork();
+            heroTask.ManageLife();
+            // System.Threading.Thread.Sleep(10000);
+            Console.Read();
             #endregion
         }
     }
