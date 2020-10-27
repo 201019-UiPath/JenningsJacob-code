@@ -6,7 +6,7 @@ namespace HeroUI
     public class MainMenu : IMenu
     {
         private string userInput;
-        private HeroMenu heroMenu = new HeroMenu(new FileRepo(), new MessagingService());
+        private HeroMenu heroMenu = new HeroMenu(new DBRepo(new HerosContext()), new MessagingService());
         private VillainMenu villainMenu= new VillainMenu(new FileRepo(), new MessagingService());
         public void start()
         {

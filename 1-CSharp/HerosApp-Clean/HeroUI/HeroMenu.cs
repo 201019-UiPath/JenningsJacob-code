@@ -41,7 +41,11 @@ namespace HeroUI
                         break;
                     case "1":
                         //call get all heros    
-                        heroService.GetAllHeroes();                    
+                        heroService.GetAllHeroes();
+                        foreach(var hero in heroService.GetAllHeroes())
+                        {
+                            Console.WriteLine($"Name: {hero.Alias}");
+                        }
                         break;
                     case "2":
                         //call the event delegate for hero work, call get hero by name
