@@ -37,7 +37,14 @@ namespace HeroUI
                         break;
                     case "1":
                         //call get all villains
-                        repo.GetAllVillains();
+                        foreach (var villain in villainService.GetAllVillains())
+                        {
+                            Console.WriteLine($"Hero: \n\tHero Alias: {villain.Alias} \n\tHero Real Name: {villain.RealName} \n\tHero Hideout: {villain.HideOut}");
+                            foreach (var power in villain.SuperPowers)
+                            {
+                                Console.WriteLine($"\tSuper Powers:\n\t\tName: {power.Name}\n\t\tDescription: {power.Description}");
+                            }
+                        }   
                         break;
                     case "2":
                         //call the event delegate for villain work, call get villain by name
@@ -46,8 +53,7 @@ namespace HeroUI
                         break;
                     case "3":
                         //call the main menu
-                        MainMenu main = new MainMenu();
-                        main.start();
+                        Console.WriteLine("Going back to main");
                         break;
                     default:
                         //invalid input message;
