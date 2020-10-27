@@ -11,10 +11,12 @@ namespace HeroUI
         private ISuperHeroRepo repo;
         private IMessagingService service;
         private HeroTasks tasks;
+        private HeroService heroService;
         public HeroMenu(ISuperHeroRepo repo, IMessagingService service){
             this.repo = repo;
             this.service = service;
             tasks=new HerosLib.HeroTasks();
+            this.heroService = new HeroService(repo);
         }
         public void start()
         {
@@ -35,9 +37,11 @@ namespace HeroUI
                         //call create a hero, get hero details
                         SuperHero newSuperHero = GetHeroDetails();
                         //call the business logic and the repo
+                        heroService.AddHero(newSuperHero);
                         break;
                     case "1":
-                        //call get all heros                        
+                        //call get all heros    
+                        heroService.GetAllHeroes();                    
                         break;
                     case "2":
                         //call the event delegate for hero work, call get hero by name

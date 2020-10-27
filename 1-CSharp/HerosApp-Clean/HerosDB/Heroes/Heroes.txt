@@ -1,1 +1,1 @@
-{"HeroId":0,"HeroName":"thor","SuperPowers":"thunder god"}
+{"Nemesis":null,"Id":0,"RealName":"end","Alias":"end","HideOut":"end","SuperPowers":[]}

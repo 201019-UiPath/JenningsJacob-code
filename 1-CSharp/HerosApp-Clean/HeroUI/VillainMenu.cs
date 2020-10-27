@@ -2,6 +2,7 @@ using HerosDB;
 using System;
 using HerosDB.Models;
 using System.Collections.Generic;
+using HerosLib;
 namespace HeroUI
 {
     public class VillainMenu : IMenu
@@ -9,9 +10,14 @@ namespace HeroUI
         private string userInput;
         private IVillainRepo repo;
         private IMessagingService service;
+        private VillainService villainService;
+        private VillainTasks tasks;
         public VillainMenu(IVillainRepo repo, IMessagingService service){
             this.repo = repo;
             this.service = service;
+            this.villainService = new VillainService(repo);
+            tasks = new VillainTasks();
+
         }
         public void start()
         {
@@ -27,12 +33,16 @@ namespace HeroUI
                     case "0":
                         //call create a villain, call get villain details
                         SuperVillain newVillain = GetVillainDetails();
+                        repo.AddAVillain(newVillain);
                         break;
                     case "1":
                         //call get all villains
+                        repo.GetAllVillains();
                         break;
                     case "2":
                         //call the event delegate for villain work, call get villain by name
+                        tasks.PlanWorldDomination();
+                        tasks.CreateChaos();
                         break;
                     case "3":
                         //call the main menu
