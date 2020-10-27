@@ -1,0 +1,116 @@
+10/27/2020
+--------------------------------------------------------------------------------------------------------
+ORM: Object Relational Mapper
+	In DBs, data stored in tables, in rows and columns
+	ORMS used to convert Db data into something c# would understand
+	ORMS maps data from DB to an object in profram
+	we will be using Entity Framework Core
+
+EF Core
+	ORM for .NEt Core
+	2 ways to connecto your db to code:
+		DB first
+			db structure already exists, classes are created based on the existing structure
+		Code first
+			create DB structure based on the classes in the code
+
+Artifacts we'll be working with
+	DBContext
+		a dbCOntext instance reporesnts a asession with the database and can be used to query and sace instances of entities
+		need to make our own implementation specific to our application
+	Connection String
+		used to connect to your db
+		contains information about database youll be connecting to
+	Startup project
+		the one that the tools build and run
+		(HerosUI)
+	Project
+		also known as target project beacuse it's wheret he commands add or remove files
+		(HerosDB)
+
+Code First EF Core
+	1. Create Entities/Models
+		make sure to use naming conventino to ease migration progress
+	2. Create implementaion of the DBContext
+	3. Run :
+		dotnet ef migrations add <name of migration> -c <implemented db-context> --startup-project <location of startup project>
+	4. Run dotnet ef database update --startup-project <location of startup project>
+	5. Repeat steps 3-4 for any chagnes to your db
+
+Migration
+	basically a snapshot of the databse schema given the current state of your models
+	changes made to the schema based on teh changes made in your models
+
+DB first EF Core
+	1. hava a dta access library project separate from the startup application project
+		with a project refence from the latter to the former
+	2. Install Mivrosoft Entity Framework Core Design and PostgreSQL to both projects
+	3. Run :
+		Dotnet ef dbcontect scafforld -c <connection-string-in-quotes>
+		-providerNpgsql.EntityFrameowrkCore.PostgreSQL
+		--startup-project <path to project folder>
+		--force
+		--output-dir Entities
+	4. Delete the DBContect.ONConfiguring method from scaffolded code
+	5. any time you change the structure of the tables, go to step 3
+
+--------------------------------------------------------------------------------------------------------
+
+Databases:
+	organized collection of structured information
+	controlled by database management system (DBMS)
+
+Relational Databaases
+	type of database that stores and provides access to data points that are related to one another
+	based on teh relational model, an intuitive, straightforward way of representing data in tables
+	stores data into relations (tables)
+
+SQL
+	structured query language
+	a programming language used by nearly all relational databases to query, manipulate, and define data and to provide access control
+	use to provide structure to your database
+	declared
+		say what we want, not hwo to implement how to get what we want
+
+Architecture
+	Query processing:
+		includes translations on high level queries into low level expressions that can be used at physical level of a file system
+	DBMS Engine
+		the core part of a DBMS that provides access to the data in a database managed by the DBMS
+
+--------------------------------------------------------------------------------------------------------
+
+SQL	Sublanguage vs Dialect
+		sublanguage: refer to the different catagories of the statements/commands in sql
+			for postgre: DDL, DML, DCL, TCL
+		dialect: refers to the SQL variant used by a database vendor
+			PGSQL, SQL Server, SQLLite
+
+DDL: Data Definition Language
+	used for creating database tables, defining the database structure
+	commands:
+		Create
+		Alter
+		Drop
+
+DML: Data Manipulation Language
+	all operations on individual rows
+	commands:
+		Select
+		Insert
+		Update
+		Delete
+
+DCL: Data Control Language
+	for DB admin, allow users ot have different permissions
+	commands:
+		Grant
+		Revoke
+
+TCL: Transaction Control Langauge
+Concerned with griuping SQL commands and executing them as a batch
+	commands:
+		Commit
+		Savepoint
+		Rollback
+		Transact
