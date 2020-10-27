@@ -11,7 +11,7 @@ namespace HerosUI
         {
             Hero obj = new Hero();
             HeroTask heroTask = new HeroTask();
-            Action del = new Action(heroTask.GetPowers); 
+            Action del = new Action(heroTask.GetPowers);
             #region default constructor
             // Hero obj = new Hero();
             // Console.WriteLine($"{obj.id}\t{obj.name}");
@@ -109,7 +109,7 @@ namespace HerosUI
             heroTask.DoWork();
             heroTask.ManageLife();
             // System.Threading.Thread.Sleep(10000);
-            Console.Read();
+            Console.ReadKey();
             #endregion
         }
     }
