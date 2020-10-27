@@ -1,4 +1,5 @@
-Training Day 1
+10/19/2020
+-----------------------------------------------------------------------------------------
 	we are UiPath Batch -> RPA (robotic process automation)
 
 	week 1-4 -> .NET

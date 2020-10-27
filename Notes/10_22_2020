@@ -203,6 +203,9 @@ Delegates: type-safe function pointers in C#
 		Single-Cast:
 		Multi-Cast:
 		Strongly-Typed Delagates: (predefined delegates)
+			Action -> returns void
+			Predicate -> returns bool
+			Func -> returns type you choose
 	
 	Delegate demo 1:
 		HerosLib
