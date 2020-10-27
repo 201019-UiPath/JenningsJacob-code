@@ -44,7 +44,7 @@ namespace HeroUI
                         heroService.GetAllHeroes();
                         foreach(var hero in heroService.GetAllHeroes())
                         {
-                            Console.WriteLine($"Name: {hero.Alias}");
+                            Console.WriteLine($"Hero: \n\tHero Alias: {hero.Alias} \n\tHero Real Name: {hero.RealName} \n\tHero Hideout: {hero.HideOut}");
                         }
                         break;
                     case "2":
