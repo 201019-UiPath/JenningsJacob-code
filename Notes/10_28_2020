@@ -1,0 +1,52 @@
+10/28/2020
+--------------------------------------------------------------------------------------------------------
+Data Access
+Select Statement
+	used for retrieving data from the database
+	clauses:
+		select:		sepecifies what columns to have in the result set
+		from:		specifies what table to query
+		where:		defines a condition, filtering out rows that don't match
+		group by:	aggregates multiple rows into one, if they have the same values for all the expressions in the group by list
+		having:		defines a condition for filtering after group by
+		order by:	specifies the sort order of the result set
+	logical order of operations to the select statement:
+		from, where, group by, having, select, order by
+
+Join
+	combine data back together in a query that was spread out into many tables by a DB's design
+	defined in a from clause in a select statement
+	kinds:
+		Full
+		Inner
+		Left
+		Right
+		Cross join: implements cartesian product
+
+Set operations
+	used to combine the results of select queries
+	Union
+		gives you all rows that are found in either query, wihtout duplicates
+	Union all
+		gives you all rows found in either query, period, including duplicates
+	Intersect
+		all rows that are in both queries
+	except
+		set difference
+
+Subqueries
+	sometimes, the most natural way to express a query is with a condition based on another query
+	operations:
+		in
+		not in
+		exists
+		any
+		all
+
+when dropping tables:
+	1. drop tables that are dependent upon other tables first
+	2. then drop other tables
+
+when creating tables:
+	1. create table with no dependencies
+	2. then create table with dependencies
