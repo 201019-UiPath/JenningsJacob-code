@@ -1,12 +1,13 @@
 ﻿using System;
 using Npgsql;
 using System.Data;
+using System.IO;
+using Microsoft.Extensions.Configuration;
 
 namespace HerosDbWithADO
 {
     public class Data
     {
-        string conStr = "Host=lallah.db.elephantsql.com;Port=5432;Database=mcrgbvzm;Username=mcrgbvzm;Password=pcdbvW2gjad0lDKxvgOV16An-xsUDZuy;";
         // Create a connection
         NpgsqlConnection connection;
         // Fire the query
@@ -20,15 +21,15 @@ namespace HerosDbWithADO
 
         public void GetSuperPersonConnected(){
             try {
-                // var configuration = new ConfigurationBuilder()
-                // .SetBasePath(Directory.GetCurrentDirectory())
-                // .AddJsonFile("appsettings.json")
-                // .Build();
+                var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
 
-                // var connectionString = configuration.GetConnectionString("HerosDB");
+                var connectionString = configuration.GetConnectionString("HerosDbWithADO");
 
-                // connection = new NpgsqlConnection(connectionString);
-                connection = new NpgsqlConnection(conStr);
+                connection = new NpgsqlConnection(connectionString);
+                // connection = new NpgsqlConnection(conStr);
                 connection.Open();
                 command = new NpgsqlCommand(connection:connection, cmdText:query);
                 // ExecuteReader reads value, used with select queries
@@ -47,7 +48,14 @@ namespace HerosDbWithADO
             }
         }
         public void GetSuperPersonDisconnected(){
-            connection = new NpgsqlConnection(conStr);
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+                var connectionString = configuration.GetConnectionString("HerosDbWithADO");
+
+                connection = new NpgsqlConnection(connectionString);
             // dataAdapter fires query, gets results when connection is available
             dataAdapter = new NpgsqlDataAdapter(query, connection);
             dataSet = new DataSet(); // creating an in-memory database
