@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Revature\\201019-UTA0UiPath\\training-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj": {}
+    "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj": {}
   },
   "projects": {
-    "c:\\Revature\\201019-UTA0UiPath\\training-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj": {
+    "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Revature\\201019-UTA0UiPath\\training-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj",
+        "projectUniqueName": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj",
         "projectName": "HerosDB",
-        "projectPath": "c:\\Revature\\201019-UTA0UiPath\\training-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj",
+        "projectPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj",
         "packagesPath": "C:\\Users\\Jacob\\.nuget\\packages\\",
-        "outputPath": "c:\\Revature\\201019-UTA0UiPath\\training-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\obj\\",
+        "outputPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jacob\\AppData\\Roaming\\NuGet\\NuGet.Config",

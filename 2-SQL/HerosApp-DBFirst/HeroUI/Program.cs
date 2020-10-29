@@ -1,15 +1,12 @@
-﻿using System;
-using HerosDB.Models;
+﻿using HerosDB.Entities;
 using HerosDB;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 namespace HeroUI
 {
     class Program
     {
         static void Main(string[] args)
         {
-            IMenu main = new MainMenu();
+            IMenu main = new MainMenu(new HeroContext(), new DBMapper());
             main.start();
         }
 
