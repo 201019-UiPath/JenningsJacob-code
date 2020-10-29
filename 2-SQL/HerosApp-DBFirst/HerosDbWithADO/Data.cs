@@ -48,12 +48,13 @@ namespace HerosDbWithADO
         }
         public void GetSuperPersonDisconnected(){
             connection = new NpgsqlConnection(conStr);
+            // dataAdapter fires query, gets results when connection is available
             dataAdapter = new NpgsqlDataAdapter(query, connection);
-            dataSet = new DataSet();
+            dataSet = new DataSet(); // creating an in-memory database
 
             int tables = dataAdapter.Fill(dataSet);
             if(tables != 0) {
-                foreach(DataRow rows in dataSet.Tables["Superpeople"].Rows){
+                foreach(DataRow rows in dataSet.Tables[0].Rows){
                     Console.WriteLine($"{rows["id"]} {rows["workname"]} {rows["hideout"]}");
                 }
             }
