@@ -30,3 +30,25 @@ Cognizant
 
 --------------------------------------------------------------------------------------------------------
 
+SOLID Principles:
+	Single Responsibility
+		every class should have only one job to do
+	Open/Closed principle
+		every class should be open to extension but closed to modification
+	Liskov Substitution
+		you should be able to use any derived class instead of a parent class and have it bnehave in the same manner without modification
+	Interface Segregation
+		clients should not be forced to implement interfaces they dont use
+	Dependency inversion principle
+		high-level modules should not depend on low-level modules
+		both should depend upon abstractions
+		abstractions should not depend upon details, details depend upon abstractions
+
+--------------------------------------------------------------------------------------------------------
+
+Singleton:
+	creates a single instance of a class
+	ensure you get back the same instance of whatever type you are retreiving
+	you want all calls to go through the same instance
+Factory	
+	class that is used to create instances of another class and returns them

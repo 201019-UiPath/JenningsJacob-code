@@ -114,3 +114,80 @@ Concerned with griuping SQL commands and executing them as a batch
 		Savepoint
 		Rollback
 		Transact
+
+--------------------------------------------------------------------------------------------------------
+
+database design
+Constraints:
+	columns can have constraints
+	used for setting guidelines in what data belongs to a column
+	types:
+		data type
+		not null
+		unique
+		check
+		exclusion
+		primary key (unique and not null)
+		foreign key
+
+Keys
+	used to identify a data set and to esablish relationships between entities
+	candidate key
+		minimal set of columns in  a table that every other column depends on
+		the values of any candidate key can uniquely identify a row
+		column that can potentially be used as a primary key
+	primary ke/y
+		unique identifier for a row
+		in implementaion, we choose one candidate key to identify the row
+	foreign key
+		a set of columns which hold hte values of some primary key to establish a relationship to another row
+	composite key
+		any key thats more than one column
+
+Referential Integrity
+	refers to the accuracy and consistency of data within a relationship
+	whenever a foreign key value is used, it must reference a valid, existing primary key
+
+Relationships in SQL
+	defined by multiplicity:
+		1:1
+			two sets of data are unique to each other
+		1:m
+			one set of data can have many instances of the other data set
+		m:m
+			both data sets can have many instances of each other
+
+Implementing SQL relationships
+	1:1
+		put both entities in hte same table or separate the entities in two tables with a FK refence that is unique and not null
+	1:m
+		two tables, FK that is not unique
+	m:m
+		3 tables, one of which is a join/junction table
+
+ER Diagram
+	shows relationship of entity sets stored in database
+	visual represntation of DB design
+
+Why separate out data
+	cant insert some data wihtout also having some other data
+	forced to delete some data in order to delte some other data
+	redundancy can mean accidental inconsistency when updating
+
+Normalization
+	designing a database in a certain way to ease data management
+	Normal forms:
+		1NF
+			atomic values
+			no repreating groups of columns
+			no duplicate rows
+		2NF
+			has to be 1NF
+			no partial dependencies
+			no composite keys mean youre 2NF by default
+		3NF
+			has to be 2NF
+			no transitive dependencies
+
+ Normalization in a nutshell
+ 	the data in the table should depend on the key (1NF), the whole key (2NF), and nothing but the key (3NF)

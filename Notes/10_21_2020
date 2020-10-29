@@ -87,7 +87,7 @@ Implementaions of Polymorphism
 		type can be declared abstractly so that aspects of its implementaion can be declared at runtime
 		generics
 	inclusion (sub-typal)
-		when a name denotes instaces of many different classes relate dby some common superclass
+		when a name denotes instaces of many different classes related by some common superclass
 		non-generics
 	coercion
 		widening/narrowing
