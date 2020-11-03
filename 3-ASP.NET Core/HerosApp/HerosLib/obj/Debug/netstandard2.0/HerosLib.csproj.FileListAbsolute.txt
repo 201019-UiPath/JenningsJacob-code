@@ -1,0 +1,12 @@
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\bin\Debug\netstandard2.0\HerosLib.deps.json
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\bin\Debug\netstandard2.0\HerosLib.dll
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\bin\Debug\netstandard2.0\HerosLib.pdb
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\bin\Debug\netstandard2.0\HerosDB.dll
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\bin\Debug\netstandard2.0\HerosDB.pdb
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\obj\Debug\netstandard2.0\HerosLib.csprojAssemblyReference.cache
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\obj\Debug\netstandard2.0\HerosLib.AssemblyInfoInputs.cache
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\obj\Debug\netstandard2.0\HerosLib.AssemblyInfo.cs
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\obj\Debug\netstandard2.0\HerosLib.csproj.CoreCompileInputs.cache
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\obj\Debug\netstandard2.0\HerosLib.csproj.CopyComplete
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\obj\Debug\netstandard2.0\HerosLib.dll
+C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosLib\obj\Debug\netstandard2.0\HerosLib.pdb
