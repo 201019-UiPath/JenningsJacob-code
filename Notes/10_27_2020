@@ -46,12 +46,12 @@ DB first EF Core
 		with a project refence from the latter to the former
 	2. Install Mivrosoft Entity Framework Core Design and PostgreSQL to both projects
 	3. Run :
-		Dotnet ef dbcontect scafforld -c <connection-string-in-quotes>
+		Dotnet ef dbcontect scafforld -c <connection-string-in-quotes>s
 		-providerNpgsql.EntityFrameowrkCore.PostgreSQL
 		--startup-project <path to project folder>
 		--force
 		--output-dir Entities
-	4. Delete the DBContect.ONConfiguring method from scaffolded code
+	4. Delete the DBContect.OnConfiguring method from scaffolded code
 	5. any time you change the structure of the tables, go to step 3
 
 --------------------------------------------------------------------------------------------------------
@@ -136,7 +136,7 @@ Keys
 		minimal set of columns in  a table that every other column depends on
 		the values of any candidate key can uniquely identify a row
 		column that can potentially be used as a primary key
-	primary ke/y
+	primary key
 		unique identifier for a row
 		in implementaion, we choose one candidate key to identify the row
 	foreign key
