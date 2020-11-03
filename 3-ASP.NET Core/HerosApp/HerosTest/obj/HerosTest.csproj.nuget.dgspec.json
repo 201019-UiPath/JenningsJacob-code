@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosTest\\HerosTest.csproj": {}
+    "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosTest\\HerosTest.csproj": {}
   },
   "projects": {
-    "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj": {
+    "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosDb\\HerosDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj",
+        "projectUniqueName": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosDb\\HerosDB.csproj",
         "projectName": "HerosDB",
-        "projectPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj",
+        "projectPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosDb\\HerosDB.csproj",
         "packagesPath": "C:\\Users\\Jacob\\.nuget\\packages\\",
-        "outputPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\obj\\",
+        "outputPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosDb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jacob\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosTest\\HerosTest.csproj": {
+    "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosTest\\HerosTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosTest\\HerosTest.csproj",
+        "projectUniqueName": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosTest\\HerosTest.csproj",
         "projectName": "HerosTest",
-        "projectPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosTest\\HerosTest.csproj",
+        "projectPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosTest\\HerosTest.csproj",
         "packagesPath": "C:\\Users\\Jacob\\.nuget\\packages\\",
-        "outputPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosTest\\obj\\",
+        "outputPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jacob\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,8 +106,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj": {
-                "projectPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosDB\\HerosDB.csproj"
+              "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosDB\\HerosDB.csproj": {
+                "projectPath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosDB\\HerosDB.csproj"
               }
             }
           }

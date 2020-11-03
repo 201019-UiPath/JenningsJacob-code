@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A9gPruJ95JfQ7b2WNbpAVp94dsV5MluAAdVH+AJ/ekoCHhlOEKvB4pr1t7jilvhPe6OoB4Rf+nsNTJXtE7UbIg==",
+  "dgSpecHash": "RI/JN6g5w8RCb9XfSDYEO8tGnT1yoMm4faMZ9V1EFUXUv0Ti7b5Q20unAtK/chpJbxUnLe3NuxnB3q4Ccy4Acw==",
   "success": true,
-  "projectFilePath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\2-SQL\\HerosApp-DBFirst\\HerosLib\\HerosLib.csproj",
+  "projectFilePath": "C:\\Revature\\201019-UTA0UiPath\\JenningsJacob-code\\3-ASP.NET Core\\HerosApp\\HerosLib\\HerosLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jacob\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Jacob\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
