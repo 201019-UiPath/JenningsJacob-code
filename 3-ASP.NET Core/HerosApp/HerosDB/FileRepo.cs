@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.IO;
 namespace HerosDB
 {
-    public class FileRepo : ISuperHeroRepo, IVillainRepo
+    public class FileRepo
     {
         private string filename = "HerosDB/Heroes/Heroes.txt";
         public async void AddAHeroAsync(SuperHero hero)

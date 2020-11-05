@@ -23,7 +23,7 @@ namespace HerosDB.Entities
         public virtual DbSet<Powers> Powers { get; set; }
         public virtual DbSet<Superpeople> Superpeople { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
@@ -35,7 +35,7 @@ namespace HerosDB.Entities
                 var connectionString = configuration.GetConnectionString("HerosDB");
                 optionsBuilder.UseNpgsql(connectionString);
             }
-        }
+        }*/
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

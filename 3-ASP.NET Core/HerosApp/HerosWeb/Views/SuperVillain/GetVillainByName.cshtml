@@ -1,0 +1,53 @@
+﻿@model HerosDB.Models.SuperVillain
+
+@{
+    ViewData["Title"] = "GetVillainByName";
+}
+
+<h1>Get Villain By Name</h1>
+
+<div>
+    <h4>Super Villain</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RealName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RealName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HideOut)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HideOut)
+        </dd>
+        @foreach (var power in Model.SuperPowers)
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SuperPowers)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => power.Name):
+                @Html.DisplayFor(model => power.Description)
+            </dd>
+        }
+
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="GetAllVIllains">Back to List</a>
+</div>

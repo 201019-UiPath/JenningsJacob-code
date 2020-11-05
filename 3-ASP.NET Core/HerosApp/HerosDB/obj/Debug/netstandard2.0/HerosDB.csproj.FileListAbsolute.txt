@@ -7,12 +7,3 @@ C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosDB\
 C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosDB\obj\Debug\netstandard2.0\HerosDB.csproj.CoreCompileInputs.cache
 C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosDB\obj\Debug\netstandard2.0\HerosDB.dll
 C:\Revature\201019-UTA0UiPath\JenningsJacob-code\2-SQL\HerosApp-DBFirst\HerosDB\obj\Debug\netstandard2.0\HerosDB.pdb
-C:\Revature\201019-UTA0UiPath\JenningsJacob-code\3-ASP.NET Core\HerosApp\HerosDb\bin\Debug\netstandard2.0\HerosDB.deps.json
-C:\Revature\201019-UTA0UiPath\JenningsJacob-code\3-ASP.NET Core\HerosApp\HerosDb\bin\Debug\netstandard2.0\HerosDB.dll
-C:\Revature\201019-UTA0UiPath\JenningsJacob-code\3-ASP.NET Core\HerosApp\HerosDb\bin\Debug\netstandard2.0\HerosDB.pdb
-C:\Revature\201019-UTA0UiPath\JenningsJacob-code\3-ASP.NET Core\HerosApp\HerosDb\obj\Debug\netstandard2.0\HerosDB.csprojAssemblyReference.cache
-C:\Revature\201019-UTA0UiPath\JenningsJacob-code\3-ASP.NET Core\HerosApp\HerosDb\obj\Debug\netstandard2.0\HerosDB.AssemblyInfoInputs.cache
-C:\Revature\201019-UTA0UiPath\JenningsJacob-code\3-ASP.NET Core\HerosApp\HerosDb\obj\Debug\netstandard2.0\HerosDB.AssemblyInfo.cs
-C:\Revature\201019-UTA0UiPath\JenningsJacob-code\3-ASP.NET Core\HerosApp\HerosDb\obj\Debug\netstandard2.0\HerosDB.csproj.CoreCompileInputs.cache
-C:\Revature\201019-UTA0UiPath\JenningsJacob-code\3-ASP.NET Core\HerosApp\HerosDb\obj\Debug\netstandard2.0\HerosDB.dll
-C:\Revature\201019-UTA0UiPath\JenningsJacob-code\3-ASP.NET Core\HerosApp\HerosDb\obj\Debug\netstandard2.0\HerosDB.pdb

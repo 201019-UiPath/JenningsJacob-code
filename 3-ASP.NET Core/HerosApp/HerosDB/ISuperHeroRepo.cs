@@ -8,5 +8,7 @@ namespace HerosDB
          Task<List<SuperHero>> GetAllHeroesAsync();
          void AddAHeroAsync(SuperHero hero);
          SuperHero GetHeroByName(string name);
+         SuperHero GetHeroById(int id);
+        void UpdateHero(SuperHero hero);
     }
 }

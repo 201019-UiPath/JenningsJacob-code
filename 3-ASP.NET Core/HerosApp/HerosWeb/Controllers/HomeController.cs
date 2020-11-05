@@ -18,7 +18,16 @@ namespace HerosWeb.Controllers
             _logger = logger;   
         }
         // public methods in controller class = action methods
-        public IActionResult Index()
+        public IActionResult Index(int id=0, string name="Avengers") // default parameters
+        {
+            //SuperHero hero = new SuperHero() { id = 1, alias = "Thor", name = "Thor" };
+            //return View(hero);
+
+            ViewBag.id = id;
+            ViewBag.name = name;
+            return View();
+        }
+        public IActionResult About()
         {
             return View();
         }

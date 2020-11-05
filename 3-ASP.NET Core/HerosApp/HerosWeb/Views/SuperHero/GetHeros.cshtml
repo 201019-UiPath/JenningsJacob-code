@@ -1,0 +1,48 @@
+﻿@model IEnumerable<HerosDB.Models.SuperHero>
+
+@{
+    ViewData["Title"] = "GetAllHero";
+}
+
+<h1>Get All Heroes</h1>
+
+<p>
+    <a asp-action="AddHero">Create Super Hero</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RealName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HideOut)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RealName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Alias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HideOut)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateHero", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "GetHerosByName", new { name = item.Alias }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

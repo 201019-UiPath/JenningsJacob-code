@@ -4,6 +4,8 @@ using HerosDB.Models;
 using HerosDB.Entities;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace HerosDB
 {
@@ -20,7 +22,7 @@ namespace HerosDB
         public void AddAHeroAsync(SuperHero hero)
         {
             context.Superpeople.AddAsync(mapper.ParseSuperHero(hero));
-            context.SaveChangesAsync();
+            context.SaveChanges();
         }
 
         public void AddAVillain(SuperVillain superVillain)
@@ -57,6 +59,22 @@ namespace HerosDB
         public SuperVillain GetVillainByName(string name)
         {
             return mapper.ParseSuperVillain(context.Superpeople.Include("Powers").SingleOrDefault(x => x.Workname == name));
+        }
+        public SuperHero GetHeroById(int id)
+        {
+            return mapper.ParseSuperHero(context.Superpeople.Include("Powers").SingleOrDefault(x => x.Id == id));
+        }
+        public void UpdateHero(SuperHero hero)
+        {
+            //var entity = GetHeroById(hero.Id);
+            var entity = context.Superpeople.Single(p => p.Id == hero.Id);
+            if (entity != null)
+            {
+                entity.Hideout = hero.HideOut;
+                entity.Realname = hero.RealName;
+                entity.Workname = hero.Alias;
+                context.SaveChanges();
+            }
         }
     }
 }

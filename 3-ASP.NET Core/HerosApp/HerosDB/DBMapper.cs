@@ -50,9 +50,12 @@ namespace HerosDB
         public ICollection<Powers> ParseSuperPower(List<SuperPower> superPower)
         {
             ICollection<Powers> powers = new List<Powers>();
-            foreach (var sp in superPower)
+            if (superPower != null)
             {
-                powers.Add(ParseSuperPower(sp));
+                foreach (var sp in superPower)
+                {
+                    powers.Add(ParseSuperPower(sp));
+                }
             }
             return powers;
         }
