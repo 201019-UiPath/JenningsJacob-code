@@ -5,7 +5,7 @@ namespace HerosDB
 {
     public interface ISuperHeroRepo
     {
-         Task<List<SuperHero>> GetAllHeroesAsync();
+         List<SuperHero> GetAllHeroesAsync();
          void AddAHeroAsync(SuperHero hero);
          SuperHero GetHeroByName(string name);
          SuperHero GetHeroById(int id);

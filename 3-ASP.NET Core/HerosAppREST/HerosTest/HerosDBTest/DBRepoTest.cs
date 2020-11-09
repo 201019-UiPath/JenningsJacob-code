@@ -92,7 +92,7 @@ namespace HerosTest.HerosDBTest
         }
 
         [Fact]
-        public async void GetHeroesShouldGet()
+        public void GetHeroesShouldGet()
         {
             //Arrange
             var options = new DbContextOptionsBuilder<HeroContext>().UseInMemoryDatabase("GetHeroesShouldGet").Options;
@@ -102,7 +102,7 @@ namespace HerosTest.HerosDBTest
             //Act
             using var assertContext = new HeroContext(options);
             repo = new DBRepo(assertContext, mapper);
-            var result = await repo.GetAllHeroesAsync();
+            var result = repo.GetAllHeroesAsync();
 
             //Assert
             Assert.NotNull(result);

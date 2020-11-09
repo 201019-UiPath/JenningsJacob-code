@@ -6,7 +6,7 @@ using System;
 
 namespace HerosLib
 {
-    public class HeroService
+    public class HeroService : IHeroService
     {
         private ISuperHeroRepo repo;
 
@@ -21,12 +21,12 @@ namespace HerosLib
         }
         public List<SuperHero> GetAllHeroes()
         {
-            Task<List<SuperHero>> getHerosTask = repo.GetAllHeroesAsync();
-            return getHerosTask.Result;
+            List<SuperHero> getHerosTask = repo.GetAllHeroesAsync();
+            return getHerosTask;
         }
-        public SuperHero GetHeroByName()
+        public SuperHero GetHeroByName(string name)
         {
-            throw new NotImplementedException();
+            return repo.GetHeroByName(name);
         }
     }
 }

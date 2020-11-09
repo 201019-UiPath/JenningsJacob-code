@@ -31,15 +31,14 @@ namespace HerosDB
             context.SaveChanges();
         }
 
-        public Task<List<SuperHero>> GetAllHeroesAsync()
+        public List<SuperHero> GetAllHeroesAsync()
         {
-           return Task.Run<List<SuperHero>>(
-               () => mapper.ParseSuperHero(
+           return mapper.ParseSuperHero(
                    context.Superpeople
                    .Include("Powers")
                    .Where(x => x.Chartype == context.Charactertype.Single(c => c.Chartype == "Superhero").Id)
                    .ToList()
-               ));
+               );
         }
 
         public List<SuperVillain> GetAllVillains()
