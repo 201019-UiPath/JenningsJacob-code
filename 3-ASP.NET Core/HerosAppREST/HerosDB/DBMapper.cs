@@ -8,6 +8,16 @@ namespace HerosDB
     {
         public SuperHero ParseSuperHero(Superpeople hero)
         {
+            if (hero.Powers == null)
+            {
+                return new SuperHero()
+                {
+                    RealName = hero.Realname,
+                    Alias = hero.Workname,
+                    HideOut = hero.Hideout,
+                    Id = hero.Id
+                };
+            }
             return new SuperHero(){
                 RealName = hero.Realname,
                 Alias = hero.Workname,
@@ -19,6 +29,16 @@ namespace HerosDB
 
         public Superpeople ParseSuperHero(SuperHero hero)
         {
+            if (hero.SuperPowers == null)
+            {
+                return new Superpeople()
+                {
+                    Realname = hero.RealName,
+                    Workname = hero.Alias,
+                    Hideout = hero.HideOut,
+                    Chartype = 1
+                };
+            }
             return new Superpeople()
             {
                 Realname = hero.RealName,
