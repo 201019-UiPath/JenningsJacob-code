@@ -68,7 +68,7 @@ Consists of establishing rules that govern the way to execute a given task or se
 - Optimizing management of the virtual workforce
 - Growing internal automation team and expertise
 - Qualifying additional processes for automation
-- 
+
 #### Selecting the Process to Automate
 ![criteria](../images/UiPath/Criteria.png)
 
@@ -85,7 +85,7 @@ Consists of establishing rules that govern the way to execute a given task or se
 - Healthcare Payer
 
 #### Planning the RPA Development
-Two mix of different methodlogies used:
+Mix of two different methodlogies used:
 - Waterfall
   - Steps defined in advance
   - Success criteria are established from beginning

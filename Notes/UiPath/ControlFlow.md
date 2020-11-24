@@ -13,9 +13,6 @@
       - [If Statement](#if-statement)
       - [Switch Activity](#switch-activity)
   - [Loops](#loops)
-  - [Other Control Flow Activities](#other-control-flow-activities)
-  - [Flowcharts](#flowcharts)
-  - [Error Handling](#error-handling)
 
 <!-- /code_chunk_output -->
 
@@ -42,15 +39,24 @@ The order in which activities or actions are executed in a workflow
 Helps the user decide the execution flow of th program bsed on certain conditions
 
 #### If Statement
-Contains a statement with a condition and two sets of instructions (Then & Else) as outcomes
+Contains a statement with a condition and two sets of instructions (Then & Else) as outcomes. In flowcharts, it will be represented as a Flow Decision
 ![IfStatement](../images/UiPath/If.png)
 
 #### Switch Activity
-Executes a set of statemnests out of multiple, based on the value of a specific expression
+Executes a set of statemnests out of multiple, based on the value of a specific expression. Used instead of if statement when we need at least 3 potential courses of action.
 ![Switch](../images/UiPath/switch.png)
 
-
 ## Loops
-## Other Control Flow Activities
-## Flowcharts
-## Error Handling
+Repititions of a set of operations based on aa given condition. Most important loops are:
+
+**Do While**:
+- execcutes a specific sequence while a condition is met. The conditition is evaluated after each execution of the statements
+- in sequences, they have their own container
+- in flowcharts, you can just connect a certain point the the workflow to another execution point
+
+**While**:
+- execcutes a specific sequence while a condition is met. The conditition is evaluated before each execution of the statements
+
+**For Each**:
+- Performs an activity or a series of activities on each element of a collection
+- in sequences, add for each activity, then give an iterator and collection of objects you wish to iterate through

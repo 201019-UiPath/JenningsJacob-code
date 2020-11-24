@@ -6,30 +6,30 @@
 
 - [Introduction to UiPath](#introduction-to-uipath)
   - [About UiPath](#about-uipath)
-    - [UiPath Methodology and Products](#uipath-methodology-and-products)
-    - [UiPath Suite Architecture](#uipath-suite-architecture)
+      - [UiPath Methodology and Products](#uipath-methodology-and-products)
+      - [UiPath Suite Architecture](#uipath-suite-architecture)
   - [Robots and Their Types](#robots-and-their-types)
-    - [Introduction to Robots](#introduction-to-robots)
-    - [Types of Robots](#types-of-robots)
-    - [Attended Robots](#attended-robots)
-    - [Unattended Robots](#unattended-robots)
+      - [Introduction to Robots](#introduction-to-robots)
+      - [Types of Robots](#types-of-robots)
+      - [Attended Robots](#attended-robots)
+      - [Unattended Robots](#unattended-robots)
   - [Studio Overview](#studio-overview)
-    - [StudioX](#studiox)
-    - [Features of Studio](#features-of-studio)
+      - [StudioX](#studiox)
+      - [Features of Studio](#features-of-studio)
   - [Orchestrator](#orchestrator)
-    - [Primary Functions of Orchestrator](#primary-functions-of-orchestrator)
+      - [Primary Functions of Orchestrator](#primary-functions-of-orchestrator)
   - [UiPath Studio UI](#uipath-studio-ui)
-    - [Keyboard Shortcuts](#keyboard-shortcuts)
-    - [UiPath Activites](#uipath-activites)
-    - [Activites Packages](#activites-packages)
-    - [Adding reusable components to automatio projects](#adding-reusable-components-to-automatio-projects)
-    - [Automation Debugging](#automation-debugging)
+      - [Keyboard Shortcuts](#keyboard-shortcuts)
+      - [UiPath Activites](#uipath-activites)
+      - [Activites Packages](#activites-packages)
+      - [Adding reusable components to automatio projects](#adding-reusable-components-to-automatio-projects)
+      - [Automation Debugging](#automation-debugging)
   - [UiPath Activities Guide](#uipath-activities-guide)
 
 <!-- /code_chunk_output -->
 
 ## About UiPath
-### UiPath Methodology and Products
+#### UiPath Methodology and Products
 **Discover**: discover automation opportunities powered by AI
   - Automation Hub
   - Process Mining
@@ -61,11 +61,11 @@
 **Measure**: measure performance
 - Insights
 
-### UiPath Suite Architecture
-![UiPath](./images/UiPath/UiPathSuiteArchitecture.PNG)
+#### UiPath Suite Architecture
+![UiPath](../images/UiPath/UiPathSuiteArchitecture.PNG)
 
 ## Robots and Their Types
-### Introduction to Robots
+#### Introduction to Robots
 Robots are UiPath's execution agents that enable the user to run processes developed in Studio
 - Mimic human actions
 - Perform actions on applications, files, and data
@@ -74,11 +74,11 @@ Robots are UiPath's execution agents that enable the user to run processes devel
 - Are non-invasive and can work 24/7
 - Improve process efficiency & saves time
 
-### Types of Robots
+#### Types of Robots
 In UiPath, there are 2 types:
-![Robots](./images/UiPath/Robots.png)
+![Robots](../images/UiPath/Robots.png)
 
-### Attended Robots
+#### Attended Robots
 - What do they do?
   - Collaborate with human worker for small and repetitive tasks
 - Where do they run?
@@ -86,7 +86,7 @@ In UiPath, there are 2 types:
 - How do they work?
   - Triggered by users or specific user events
 
-### Unattended Robots
+#### Unattended Robots
  - What do they do?
   - Run long processes or automations without human interaction
 - Where do they run?
@@ -96,15 +96,15 @@ In UiPath, there are 2 types:
 
 ## Studio Overview
 Studio is used to develop Robots
-![UiPathStudio](./images/UiPath/UiPathStudio.png)
+![UiPathStudio](../images/UiPath/UiPathStudio.png)
 
-### StudioX
+#### StudioX
 Offers:
 1. Complete solution for businesses to automate applications
 2. Seamless integration with Microsoft Office applications (such as MS Excel)
 3. Real-time graphic representation of automation project in Designed panel
 
-### Features of Studio
+#### Features of Studio
 **Productivity**: 
 - drag and drop activities
 - manage dependencies
@@ -135,7 +135,7 @@ Offers:
 Orchestrator is the heart of automation management and is used to publish and execute the automation workflows developed in Studio
 ![Orchestrator](../images/UiPath/orchestrator.png)
 
-### Primary Functions of Orchestrator
+#### Primary Functions of Orchestrator
 - Serving as the control room
 - Monitoring the robots remotely
 - Ensuring correct delivery of package to the robots
@@ -144,14 +144,14 @@ Orchestrator is the heart of automation management and is used to publish and ex
 - Triggering the robots
 
 ## UiPath Studio UI
-### Keyboard Shortcuts
+#### Keyboard Shortcuts
 ![sc1](../images/UiPath/sc1.png)
 ![sc2](../images/UiPath/sc2.png)
 ![sc3](../images/UiPath/sc3.png)
 ![sc4](../images/UiPath/sc4.png)
 ![sc5](../images/UiPath/sc5.png)
 
-### UiPath Activites
+#### UiPath Activites
 - Part of the UiPath studio application
 - Help create a clear and cmooth automatio process
 - Multiple activietes needed to create a workflow
@@ -159,7 +159,7 @@ Orchestrator is the heart of automation management and is used to publish and ex
 - Integrated into packages
 - Mangaed with the help of feeds
 
-### Activites Packages
+#### Activites Packages
 A bundle of activites that can help automate a certain application, a category of apps, or use certain technologies in automations. UiPath Studio includes several activity packs by default along with these default process dependencies:
 **System Actvites**
 - manipulates data tables by adding or extracting information
@@ -170,13 +170,13 @@ A bundle of activites that can help automate a certain application, a category o
 **Ui Automation Activites**
 - contains basic activities for creating automation projects
 
-### Adding reusable components to automatio projects
+#### Adding reusable components to automatio projects
 1. open existing/create new project
 2. All Packages -> pick library feed -> install package
 3. Add package to project bny selecting OK
 4. Activity in Activites panel
 
-### Automation Debugging
+#### Automation Debugging
 Process of identifying and removing the errors which prevent the project from functioning correctly. In Studio, debugging is:
 - useful for verifying the data that each activity gets during execution
 - done at activity, file, and project level
@@ -246,7 +246,7 @@ Process of identifying and removing the errors which prevent the project from fu
   - Perform requests using specific protocols to any web APIs that support them
   - manipulate XML and JSON files
   - automate various software components with less effort
-  - 
+
 **Additional Services:**
 ![act1](../images/UiPath/act1.png)
 ![act2](../images/UiPath/act2.png)

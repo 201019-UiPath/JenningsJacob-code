@@ -5,12 +5,12 @@
 
 - [RPA Basics](#rpa-basics)
   - [Programming Constructs in RPA](#programming-constructs-in-rpa)
-    - [Process](#process)
-    - [RPA Programming Constructs](#rpa-programming-constructs)
+      - [Process](#process)
+      - [RPA Programming Constructs](#rpa-programming-constructs)
 
 <!-- /code_chunk_output -->
 ## Programming Constructs in RPA
-### Process
+#### Process
 Defined as a series of steps, activites and decisions involved in the way work in accomplished
 1. Typically 2 ways to represent a process
    1. A ***sequence***, where actions come one after another
@@ -22,7 +22,7 @@ Defined as a series of steps, activites and decisions involved in the way work i
 Common Flowchart Symbols:
 ![flowchart](../images/UiPath/flowchart.png)
 
-### RPA Programming Constructs
+#### RPA Programming Constructs
 They are the backbone of any programming language. Some important programming contsructs are:
 - Sequence
 - Selection

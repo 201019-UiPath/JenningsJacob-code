@@ -34,7 +34,7 @@ A Variable:
 #### Properties of Variables
 Users can configure variables through their properties:
 - **Name**: name of variable
-- **Type**: kind of data that the variable is intended to store
+- **Type**: kind of data that the variable is intended to store. Declared when cariable is created
 - **Value**: data that a variable holds (changes throughout the proccess)
 - **Scope**: Designates parts of program that cna use a variable (local, global)
 
