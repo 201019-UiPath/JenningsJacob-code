@@ -20,6 +20,15 @@
       - [Managing Arguments](#managing-arguments)
   - [Argument Directions](#argument-directions)
   - [Arguments vs. Variables](#arguments-vs-variables)
+  - [Assets](#assets)
+      - [What are Assets?](#what-are-assets)
+      - [Business Scenarios for Assest](#business-scenarios-for-assest)
+      - [How are assets created and used](#how-are-assets-created-and-used)
+  - [Queues](#queues)
+      - [What are queues?](#what-are-queues)
+      - [Business Scenarios for Queues](#business-scenarios-for-queues)
+      - [Working with queues](#working-with-queues)
+      - [Activities](#activities)
 
 <!-- /code_chunk_output -->
 
@@ -135,3 +144,90 @@ Specify the direction from/to which the data is passed
 | created and modified through Arguments Panel | created and modified through Variables Panel |
 | defined by properties: `Name`, `Direction`, `Type`, `Default Value` | defined by properties: `Name`, `Scope`, `Type`, `Default Value` |
 | if user does not assign a value to an argument, it does not have any default value | automatically assigned a default value |
+
+## Assets
+#### What are Assets?
+They are shared variables or credentials that are stored in the Orchestrator and used by the robots in different automation projects. They can be considered a data repository that the robts can access when running processses, based on clear instructions.
+
+There are 4 types of assets:
+1. Text: equivalent of string
+2. Bool: true or false
+3. Integer: whole numbers
+4. Credential: contains usernames and passwords that the robot required to executre particular processes, such as login details
+
+#### Business Scenarios for Assest
+- When data doesn't change from one execution of a process to another
+  - it doesn't make sense to assign it every time from the parameters tab
+  - data that may change shouldn't be stored in the workflow
+- Whenever robots need credentials to access applications in an automation scenario
+  - credentials are encrypted with AES 256 algorithm
+
+#### How are assets created and used
+In **Orchestrator**
+- Assets can be created from the dedicated area
+- name and data type have to be provioded, can be configured as:
+  - Single Value - can be accessed and used by all robots
+  - Value Per Robot - each value provided can be accessed only by the indicated robot
+- Assets can be modified or deleted from the same menu
+
+In **Studio**
+- For creadentias, the 'Get Credential' activity has to be used
+- For all other types of assets, the 'Get Asset' activity has to be used
+
+## Queues
+#### What are queues?
+- Containers that can hold an unlimited number of items
+- In Orchestrator, it will store items and allow their distiribution individually to robots for processing and monitoring the status of the items based on the process outcomes
+- advantages:
+  - crentralized depository of work items
+  - reporting capabilities at individual item level, as well as queue level
+  - effectiveness of item distribution process - anytime a robot becomes available, the queu item in line is dispatched
+  - unitary logic of item distribution - FIFO
+
+#### Business Scenarios for Queues
+- Item in queue known as transaction
+  - they are indivisible units of work
+- useful for large automations, where number of items is high and the distribution process may become problematic
+- Ex:
+  - New customer enrollment forms for a retail company
+  - Complaint process of a worldwide retailer
+
+#### Working with queues
+- Queues can be created with Orchestrator
+  - will initially be empty, but there are activities in UiPath Studio to make the robots populate queues
+- You can set the **max number of retries** (number of times you want a queue item to be retried) and **Unique Reference** field (yes -> transaction references to be unique)
+  - these settings cannot be modified once set
+- Very important for Dispatcher and Performer Model, in which 2 main stages of a process invovling queues are separated:
+  - the stage in which data is taken and fed into a queue in orchestrator, from where it can be taken and processed by hte robots. Called the *Dispatcher*
+  - the stage in which the data is processed, called *Perfomer*
+
+#### Activities
+`Add Queue Item`
+- the robot will send an item to the designated Queue and will configure the time frame and the other parameters
+
+`Add Transaction Item`
+- Robot adds an item to the queue and starts the transaction with the status 'in progress'
+- the queue item cannot be sent for processing until the robot finalizes this activity and updates the status
+
+`Get Transaction Item`
+- Gets an item from the queue to process it, setting the status to 'in progress'
+
+`Postpone Transaction Item`
+- Adds time parameters between which a transaction must be processed
+
+`Set Transaction Progress`
+- Enables the create of custom progress statusses for in progress transactions
+- useful for transactions that have a longer processing duration, and breaking down the workload will give valuable informaiton
+
+`Set Transaction Status`
+- Changes the status of the transaction item to Failed (with an Application or Business Exception) or Successful
+- a transaction failed due to Application Exceptions will be retried
+- a transaction failed due to Business Exceptions will not be retried
+- a Queue item can have one of the following statuses:
+  - New - just added to the queue with Add Queue Item (or the item was postponed or a deadline was added to it)
+  - In Progress - the item was processed with the Get Transaction Item or the Add Transaction Item activity
+  - Failed - the item did not meet a business or application requirement within the project
+  - Successful - teh item was processed
+  - Abandoned - the item remained in teh In Progress status for a long period of time (approx. 24 hrs) without being processed
+  - Retried - the item failed with an application exception and was retried
+  - Deleted - the item has been manually deleted from the Transactions page
